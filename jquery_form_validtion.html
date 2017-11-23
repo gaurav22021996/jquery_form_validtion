@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+</head>
+<body>
+
+
+<input type="text" name="" class="email" />
+
+<input type="text" name="" class="website" />
+
+<input type="text" name="" class="address" />
+
+<input type="text" name="" class="name" />
+
+<input type="text" name="" class="description" />
+
+<script>
+	$(document).ready(function(){
+
+    $(".email").keyup(function(){
+        this.value = this.value.replace(/([~!#$%^&*()_+=`{}\[\]\|\\:;'"<>,\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'');
+    });
+
+     $(".website").keyup(function(){
+        this.value = this.value.replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'"<>,\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'');
+    });
+
+    $(".address").keyup(function(){
+        this.value = this.value.replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'"<>\/?])+/g, '-').replace(/^(-)+|(-)+$/g,'');
+    });
+
+     $(".name").keyup(function(){
+        this.value = this.value.replace(/([0-9\.~!@#$%^&*()_+=`{}\[\]\|\\:;"<>\/?])+/g, '-').replace(/^(-)+|(-)+$/g,'');
+    });
+    
+    $(".description").keyup(function(){
+        this.value = this.value.replace(/([0-9\.~!@#$%^&*()_+=`{}\[\]\|\\:;"'<>\/?])+/g, '-').replace(/^(-)+|(-)+$/g,'');
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
