@@ -45,7 +45,13 @@ $(document).ready(function(){
     $(".description").keyup(function(){
         this.value = this.value.replace(/([0-9\.~!@#$%^&*()_+=`{}\[\]\|\\:;"'<>\/?])+/g, '-').replace(/^(-)+|(-)+$/g,'');
     });
+//filter in jquery element to get event happen
+	jQuery("#menu-main-menu li a").filter(function() {
+	    return jQuery(this).text() === "Login";
+	}).click(function(){
 
+	});
+		
 });
 
 </script>
